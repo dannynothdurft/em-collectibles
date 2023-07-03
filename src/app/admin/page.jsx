@@ -6,15 +6,10 @@
 */
 
 "use client";
-import LuckySpin from "@/module/lucky-spin/src/LuckySpin";
 import React from "react";
 
 function Admin() {
-  return (
-    <div>
-      <LuckySpin />
-    </div>
-  );
+  return <div>Dashboard</div>;
 }
 
 export default Admin;
