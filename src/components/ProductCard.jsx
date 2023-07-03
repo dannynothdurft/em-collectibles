@@ -74,7 +74,10 @@ function ProductCard({ data }) {
           </Link>
         </div>
         <div className="product--card--icon--view">
-          <Link href={`/products/${data._id}`} alt="zum Artikel">
+          <Link
+            href={`/products/${data._id}`}
+            alt={`zum Artikel - ${data.name}`}
+          >
             <BsEye className="product--card--icon" />
           </Link>
         </div>
