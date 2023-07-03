@@ -22,6 +22,8 @@ export const metadata = {
   applicationName: "EM-Collectibles",
   siteName: "Home | EM-Collectibles",
   viewport: "width=device-width, initial-scale=1.0",
+  robots: "index,follow",
+  description: `Hier findest du schnell und unkompliziert Grading Karten.`,
 };
 
 export default function RootLayout({ children }) {
