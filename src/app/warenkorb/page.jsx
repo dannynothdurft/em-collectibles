@@ -1,5 +1,5 @@
 /* 
-  Datei: warenkorb/page.jsx
+  Datei: Warenkorb.jsx
   Version: 1.0.0
   Entwickler: Danny Nothdurft
 */
@@ -13,7 +13,7 @@ import Image from "next/image";
 import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
 
-function page() {
+function Warenkorb() {
   const router = useRouter();
   const currentUrl =
     typeof window !== "undefined" ? window.location.origin : "";
@@ -160,4 +160,4 @@ function page() {
   );
 }
 
-export default page;
+export default Warenkorb;
