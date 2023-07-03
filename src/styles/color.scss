@@ -1,0 +1,21 @@
+/* 
+  Datei: color.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+  Beschreibung: Dieses Stylesheet enthält die Stilregeln für alle Farben der Shop-Anwendung.
+*/
+
+$font-color-bright: #ffffff;
+$font-color-dark: #4d4b50;
+$base-color: #00ab9f;
+$base-shadow: #cccccc;
+$base-button-color: #3c0148;
+
+$border-color: #eeeeee;
+
+$gradient-background-color: linear-gradient(
+  90deg,
+  rgba(3, 40, 60, 1) 0%,
+  rgba(9, 9, 121, 1) 2%,
+  rgba(131, 4, 100, 1) 62%
+);

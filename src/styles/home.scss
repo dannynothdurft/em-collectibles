@@ -1,0 +1,193 @@
+/* 
+  Datei: home.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+  Beschreibung: Dieses Stylesheet enthält die Stilregeln für Home der Shop-Anwendung.
+*/
+
+@import "./color.scss";
+
+.main--container--page {
+  .header--image {
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 10px $base-shadow);
+  }
+
+  .grading--company--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    gap: 10px;
+
+    @media screen and (max-width: 700px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 435px) {
+      margin: 15px;
+    }
+
+    .grading--company--card {
+      width: 100%;
+      max-width: 215px;
+      max-height: 122px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $base-shadow;
+      box-shadow: 5px 5px 5px $base-shadow;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin: 0 auto;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .grading--image {
+        height: auto;
+        width: 100%;
+        max-height: 120px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .new--at--shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .headline {
+      background: $gradient-background-color;
+      color: $font-color-bright;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 62px;
+      width: 100%;
+      font-size: 2.3rem;
+
+      @media screen and (max-width: 600px) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 435px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .new--at--shop--product--cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      width: 100%;
+      margin: 30px 0;
+      justify-items: center;
+      align-items: center;
+
+      @media screen and (max-width: 800px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (max-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 435px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 15px;
+        padding: 0 10px;
+      }
+    }
+
+    .button {
+      color: $font-color-bright;
+      background-color: $base-button-color;
+      border: 1px solid $base-button-color;
+      width: 200px;
+      height: 40px;
+      font-size: 20px;
+      border-radius: 4px;
+      box-shadow: 3px 3px 3px $base-shadow;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @media screen and (max-width: 435px) {
+        width: 90%;
+      }
+    }
+  }
+
+  .home--shippinginfo--container {
+    background: $gradient-background-color;
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    margin-top: 30px;
+    gap: 25px;
+
+    @media screen and (max-width: 867px) {
+      height: unset;
+      min-height: 250px;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    @media screen and (max-width: 599px) {
+      justify-content: center;
+    }
+
+    .home--shippinginfo--content {
+      width: 70%;
+      margin-left: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        color: $font-color-bright;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: $font-color-bright;
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 599px) {
+        width: 100%;
+        margin-right: 25px;
+      }
+    }
+
+    .home--shippinginfo--image {
+      @media screen and (max-width: 843px) {
+        margin-top: 4px;
+      }
+
+      @media screen and (max-width: 599px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+/* 
+  Datei: globals.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+  Beschreibung: Dieses Stylesheet enthält die Stilregeln für alle Standard Anforderungen der Shop-Anwendung.
+*/
+
+@import "./color.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #4d4b50;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color-dark;
+  cursor: pointer;
+}
+
+.text--bold {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+span {
+  font-weight: bold;
+}
+
+.product--adtobasket--button {
+  .btn {
+    color: $base-color;
+    background-color: unset;
+    font-size: 13px;
+    border: 0.3em solid $base-color;
+    border-radius: 0.5em;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: "Times New Roman", "Times", serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 2em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      color: black;
+
+      span {
+        transform: translateY(0) scale(2);
+      }
+    }
+
+    span {
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      background-color: $base-color;
+      transform: translateY(150%);
+      border-radius: 50%;
+      left: calc((var(--n) - 1) * 25%);
+      z-index: -1;
+      transition: 0.5s;
+      transition-delay: calc((var(--n) - 1) * 0.1s);
+
+      &:nth-child(1) {
+        --n: 1;
+      }
+
+      &:nth-child(2) {
+        --n: 2;
+      }
+
+      &:nth-child(3) {
+        --n: 3;
+      }
+
+      &:nth-child(4) {
+        --n: 4;
+      }
+    }
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-25 {
+  gap: 25px;
+}

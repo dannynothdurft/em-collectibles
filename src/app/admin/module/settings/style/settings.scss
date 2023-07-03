@@ -1,0 +1,62 @@
+/* 
+  Datei: settings.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+  Beschreibung: Dieses Stylesheet enthält die Stilregeln für die Settings der Admin-Anwendung.
+*/
+
+@import "../../../style/color.scss";
+
+.settings--page {
+  display: flex;
+  margin: 30px;
+  justify-content: space-between;
+}
+
+.settings--form {
+  display: flex;
+  align-items: flex-start;
+
+  position: relative;
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+  }
+
+  label {
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    width: 380px;
+
+    input {
+      width: 245px;
+      padding: 2px 4px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+
+  button {
+    padding: 5px 10px;
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+  }
+}
+
+.settings--image--upload {
+  .image--container {
+    margin: 25px;
+  }
+
+  button {
+    padding: 5px 10px;
+    width: 200px;
+  }
+}

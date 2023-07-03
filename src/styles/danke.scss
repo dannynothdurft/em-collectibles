@@ -1,0 +1,26 @@
+/* 
+  Datei: danke.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+*/
+
+@import "./color.scss";
+
+.thanks--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 400px);
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  a {
+    margin-top: 25px;
+    color: $base-color;
+    padding: 0 5px;
+    border-bottom: 1px solid $base-color;
+  }
+}

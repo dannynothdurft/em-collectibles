@@ -1,0 +1,98 @@
+{
+    "optionType": [
+        { "value": "", "label": "Wähle ein Type" },
+        { "value": "Normal", "bgc": "#deebee", "label": "Normal" },
+        { "value": "Elektro", "bgc": "#ffe657", "label": "Elektro" },
+        { "value": "Feuer", "bgc": "#ee583b", "label": "Feuer" },
+        { "value": "Wasser", "bgc": "#72bfe5", "label": "Wasser" },
+        { "value": "Pflanze", "bgc": "#73ba42", "label": "Pflanze" },
+        { "value": "Psycho", "bgc": "#9f71af", "label": "Psycho" },
+        { "value": "Kampf", "bgc": "#b66321", "label": "Kampf" },
+        { "value": "Feen", "bgc": "#e04f8b", "label": "Feen" },
+        { "value": "Metall", "bgc": "#a3a49b", "label": "Metall" },
+        { "value": "Finsternis", "bgc": "#5992a8", "label": "Finsternis" }
+        
+    ],
+    "optionRarityLevel" : [
+        { "value": "", "label": "Wähle eine Seltenheit" },
+        { "value": "Common", "label": "Common" },
+        { "value": "Uncommon", "label": "Uncommon" },
+        { "value": "Rare", "label": "Rare" },
+        { "value": "Reverse Holo", "label": "Reverse Holo" },
+        { "value": "Holo Rare", "label": "Holo Rare" },
+        { "value": "Ultra Rare", "label": "Ultra Rare" },
+        { "value": "Rainbow Rare", "label": "Rainbow Rare" },
+        { "value": "Trible Rare", "label": "Trible Rare" },
+        { "value": "Secret Rare", "label": "Secret Rare" },
+        { "value": "Amazing Rare", "label": "Amazing Rare" },
+        { "value": "Shiny Rare", "label": "Shiny Rare" },
+        { "value": "Rare Prism Star", "label": "Rare Prism Star" },
+        { "value": "Promo", "label": "Promo" }
+        
+    ],
+    "optionLanguage" : [
+        { "value": "", "label": "Wähle eine Sprache" },
+        { "value": "Deutsch", "label": "Deutsch" },
+        { "value": "Englisch", "label": "Englisch" },
+        { "value": "Japanisch", "label": "Japanisch" }
+    ],
+    "optionGradingScale" : [
+        { "value": "", "label": "Wähle ein Grad" },
+        {"value": "Poor", "label": "Poor"},
+        {"value": "Played", "label": "Played"},
+        {"value": "Light Played", "label": "Light Played"},
+        { "value": "Good", "label": "Good" },
+        {"value": "Excellent", "label": "Excellent"},
+        { "value": "Excellent-Mint", "label": "Excellent-Mint" },
+        {"value": "NM-Mint", "label": "NM-Mint"},
+        { "value": "Mint", "label": "Mint" },
+        {"value": "Gem Mint", "label": "Gem Mint"},
+        {"value": "Pristine", "label": "Pristine"},
+        {"value": "Black-Label", "label": "Black-Label"}
+    ],
+    "optionGradingEvaluation" : [
+        { "value": "", "label": "Wähle eine Bewertung" },
+        {"value": "1", "label": "1"},
+        {"value": "1.5", "label": "1.5"},
+        {"value": "2", "label": "2"},
+        { "value": "2.5", "label": "2.5" },
+        {"value": "3", "label": "3"},
+        { "value": "3.5", "label": "3.5" },
+        {"value": "4", "label": "4"},
+        { "value": "4.5", "label": "4.5" },
+        {"value": "5", "label": "5"},
+        {"value": "5.5", "label": "5.5"},
+        {"value": "6", "label": "6"},
+        {"value": "6.6", "label": "6.6"},
+        {"value": "7", "label": "7"},
+        {"value": "7.5", "label": "7.5"},
+        {"value": "8", "label": "8"},
+        {"value": "8.5", "label": "8.5"},
+        {"value": "9", "label": "9"},
+        {"value": "9.5", "label": "9.5"},
+        {"value": "10", "label": "10"},
+        {"value": "10 Black-Label", "label": "10 Black-Label"}
+    ],
+    "optionSet": [
+        {"value": "", "label": "Wähle ein Set"},
+        {"value": "Basis-Set", "label": "Basis-Set"},
+        {"value": "Dschungel", "label": "Dschungel"},
+        {"value": "Fossil", "label": "Fossil"},
+        {"value": "Team Rocket", "label": "Team Rocket"},
+        {"value": "Wizards Black Star Promos", "label": "Wizards Black Star Promos"},
+        {"value": "Verborgenes Schicksal", "label": "Verborgenes Schicksal"},
+        {"value": "Legendary Heartbeat", "label": "Legendary Heartbeat"},
+        {"value": "Flammende Finsternis", "label": "Flammende Finsternis"}
+    ],
+    "optonGradingCompany": [
+        {"value": "", "label": "Wähle ein Grading Firma"},
+        {"value": "Professional Sports Authenticator (PSA)", "label": "Professional Sports Authenticator (PSA)"},
+        {"value": "GSG", "label": "GSG"},
+        {"value": "AP", "label": "AP"},
+        {"value": "PGS", "label": "PGS"},
+        {"value": "Beckett", "label": "Beckett"},
+        {"value": "Ultimate Grading Cards", "label": "Ultimate Grading Cards"},
+        {"value": "Cosmic Grading Service (CGS)", "label": "Cosmic Grading Service (CGS)"}
+    ]
+
+}

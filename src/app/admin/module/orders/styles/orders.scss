@@ -1,0 +1,224 @@
+/* 
+  Datei: orders.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+*/
+
+@import "../../../style/color.scss";
+
+// .orders--daschboard--container {
+// }
+
+.advertisement--container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 14px;
+  box-shadow: $box-shadow;
+}
+
+.orderfilter--container {
+  margin: 15px 15px;
+  display: flex;
+  gap: 25px;
+
+  input {
+    padding: 2px 4px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  input:nth-child(1) {
+    width: 20%;
+  }
+  input:nth-child(2) {
+    width: 25%;
+  }
+  input:nth-child(3) {
+    width: 25%;
+  }
+  input:nth-child(4) {
+    width: 10%;
+  }
+
+  button {
+    width: 10%;
+  }
+}
+
+.orderlist--container {
+  width: 100%;
+  height: 250px;
+  overflow: scroll;
+
+  .orderlist--table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    @mixin th($width, $padding, $size) {
+      width: $width;
+      border: $border;
+      padding: $padding;
+      font-weight: normal;
+      font-size: $size;
+    }
+    .orderlist--table--head {
+      background-color: $background-color-secundary;
+    }
+    .th--order-number {
+      @include th(20%, 6px 0, 14px);
+    }
+    .th--customer-name {
+      @include th(30%, 6px 0, 14px);
+    }
+    .th--customer-email {
+      @include th(30%, 6px 0, 14px);
+    }
+    .th--order-status {
+      @include th(20%, 6px 0, 14px);
+    }
+
+    .orderlist--table--body {
+      tr:nth-child(2n) {
+        background-color: $background-color-primary;
+      }
+      .th--order-number {
+        &:hover {
+          cursor: pointer;
+          color: $primery-color;
+        }
+      }
+    }
+  }
+
+  .orderlist--error--text {
+    text-align: center;
+    margin: 15px;
+    font-weight: bold;
+    color: $color-error;
+  }
+}
+
+.activeOrder--container {
+  border-top: $border;
+  display: flex;
+  gap: 40px;
+  padding: 15px;
+
+  .order--information {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .order--basket {
+    table {
+      width: 500px;
+      border-collapse: collapse;
+
+      thead {
+        background-color: $background-color-secundary;
+        tr {
+          border: 1px solid gray;
+          th:nth-child(1) {
+            width: 70%;
+            padding: 5px;
+          }
+
+          th:nth-child(2) {
+            width: 10%;
+            padding: 5px;
+          }
+
+          th:nth-child(3) {
+            width: 20%;
+            padding: 5px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          border: 1px solid gray;
+
+          font-size: 14px;
+          font-weight: normal;
+          th:nth-child(1) {
+            width: 70%;
+            padding: 5px;
+          }
+
+          th:nth-child(2) {
+            width: 10%;
+            padding: 5px;
+          }
+
+          th:nth-child(3) {
+            width: 20%;
+            padding: 5px;
+          }
+        }
+      }
+
+      tfoot {
+        background-color: $background-color-secundary;
+
+        tr {
+          border: 1px solid gray;
+
+          th:nth-child(1) {
+            width: 70%;
+            padding: 5px;
+          }
+
+          th:nth-child(2) {
+            width: 10%;
+            padding: 5px;
+          }
+
+          th:nth-child(3) {
+            width: 20%;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .action--container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    // Button-Stile
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: $primery-color;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      input {
+        width: 245px;
+        padding: 2px 4px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+  }
+}

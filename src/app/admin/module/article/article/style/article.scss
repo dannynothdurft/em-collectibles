@@ -1,0 +1,395 @@
+/* 
+  Datei: article.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+  Beschreibung: Dieses Stylesheet enthält die Stilregeln für das Module article der Admin-Anwendung.
+*/
+
+@import "../../../../style/color.scss";
+
+.article--page--container {
+  .article--action {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: $box-shadow;
+
+    .article--action--button {
+      background-color: unset;
+      border: none;
+      cursor: pointer;
+      padding: 5px 6px;
+    }
+  }
+
+  .article--filter {
+    .article--filter--container {
+      margin: 15px 15px;
+      display: flex;
+      gap: 25px;
+
+      input {
+        padding: 2px 4px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      input:nth-child(1) {
+        min-width: 50px;
+        max-width: 85px;
+      }
+      input:nth-child(2) {
+        width: 36%;
+      }
+      input:nth-child(3) {
+        width: 16%;
+      }
+      input:nth-child(4) {
+        min-width: 50px;
+        max-width: 100px;
+      }
+
+      input:nth-child(5) {
+        width: 18%;
+      }
+
+      button {
+        padding: 4px 10px;
+        font-size: 13px;
+        width: 10%;
+      }
+    }
+  }
+
+  .article--show {
+    height: 250px;
+    overflow: scroll;
+
+    .article--list--container {
+      width: 100%;
+
+      .article--list--table {
+        width: 100%;
+        border-collapse: collapse;
+
+        @mixin th($width, $padding) {
+          width: $width;
+          border: $border;
+          padding: $padding;
+          font-weight: normal;
+        }
+
+        .article--list--table--head {
+          font-size: 14px;
+          background-color: $background-color-secundary;
+
+          .th--active {
+            @include th(60px, 6px 0);
+          }
+
+          .th--name {
+            @include th(300px, 6px 0);
+          }
+
+          .th--cardNumber {
+            @include th(150px, 6px 0);
+          }
+
+          .th--grading {
+            @include th(60px, 6px 0);
+          }
+
+          .th--gradingEvaluation {
+            @include th(150px, 6px 0);
+          }
+
+          .th--delete {
+            @include th(100px, 6px 0);
+          }
+        }
+
+        .article--list--table--body {
+          font-size: 13px;
+
+          tr:nth-child(2n) {
+            background-color: $background-color-primary;
+          }
+
+          .th--active {
+            @include th(60px, 4px 0);
+          }
+
+          .th--name {
+            @include th(300px, 4px 0);
+            cursor: pointer;
+
+            &:hover {
+              color: $primery-color;
+            }
+          }
+
+          .th--cardNumber {
+            @include th(150px, 4px 0);
+          }
+
+          .th--grading {
+            @include th(60px, 4px 0);
+          }
+
+          .th--gradingEvaluation {
+            @include th(150px, 4px 0);
+          }
+
+          .th--delete {
+            @include th(100px, 0);
+          }
+        }
+      }
+
+      .article--list--error--text {
+        text-align: center;
+        margin: 15px;
+        font-weight: bold;
+        color: $color-error;
+      }
+    }
+  }
+
+  .article--manage {
+    background-color: $background-color-primary;
+    border-top: $border;
+
+    .article--manage--button--container {
+      display: flex;
+      gap: 12px;
+      background-color: $background-color-secundary;
+
+      .article--manage--button {
+        background-color: unset;
+        border: none;
+        cursor: pointer;
+        padding: 5px 6px;
+
+        &.active {
+          background-color: $background-color-primary;
+          border: $border;
+          border-bottom: unset;
+        }
+      }
+    }
+
+    .article--manage--form {
+      margin: 10px 20px;
+      display: flex;
+      gap: 25px;
+      position: relative;
+
+      .article--manage--form--left-side {
+        width: 450px;
+
+        label {
+          display: flex;
+          margin: 5px 0;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 12px;
+          width: 420px;
+
+          input {
+            width: 245px;
+            padding: 2px 4px;
+            font-size: 12px;
+            cursor: pointer;
+          }
+        }
+
+        .custom--select {
+          position: relative;
+          width: 420px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 12px;
+          margin: 5px 0;
+
+          input {
+            width: 245px;
+            padding: 2px 4px;
+            font-size: 12px;
+            cursor: pointer;
+          }
+
+          ul {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 245px;
+            margin-top: 5px;
+            padding: 0;
+            list-style: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            display: none;
+            z-index: 10;
+
+            li {
+              padding: 4px 8px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #f1f1f1;
+              }
+            }
+          }
+        }
+
+        .toggle--switch--container {
+          display: flex;
+          justify-self: center;
+          align-items: center;
+          font-size: 12px;
+          margin: 5px 0;
+          width: 420px;
+
+          .toggle--content {
+            font-weight: normal;
+            width: 175px;
+          }
+
+          .toggle--switch--button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .toggle--box {
+              position: relative;
+              width: 30px;
+              height: 15px;
+              background-color: #e9e9ea;
+              border-radius: 400px;
+              transition: 1s ease all;
+
+              .toggle--circle {
+                position: absolute;
+                top: calc(50% - 8px);
+                left: 0px;
+                width: 16px;
+                height: 16px;
+                background-color: #ffffff;
+                box-shadow: 0px 0px 0px 2px #e9e9ea;
+                border-radius: 100%;
+                transition: 1s ease all;
+              }
+            }
+
+            .toggle--value {
+              font-weight: normal;
+            }
+          }
+        }
+      }
+
+      .article--manage--form--right--side {
+        width: 700px;
+
+        label {
+          display: flex;
+          margin: 5px 0;
+          justify-content: space-between;
+          align-items: flex-start;
+          font-size: 12px;
+          max-width: 700px;
+
+          textarea {
+            width: 100%;
+            height: 300px;
+            cursor: pointer;
+            resize: none;
+            font-size: 12px;
+            margin-left: 15px;
+          }
+        }
+      }
+
+      .article--manage--form--button--save {
+        position: absolute;
+        left: 600px;
+        top: 320px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      .article--manage--form--button--delete {
+        position: absolute;
+        left: 700px;
+        top: 320px;
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  .image--upload--container {
+    height: 52.3vh;
+    background-color: $background-color-primary;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+
+    .image--preview {
+      border: $border;
+      height: 400px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+
+    .image--upload--view {
+      height: 100%;
+
+      .all--image {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .image--entry {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .entry--info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            width: 870px;
+          }
+
+          .entry--delete {
+            .delete--icon {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .image--upload--button--save {
+      position: absolute;
+      bottom: 20px;
+      padding: 5px 10px;
+    }
+  }
+}

@@ -1,0 +1,431 @@
+/* 
+  Datei: basket.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+*/
+
+@import "./color.scss";
+
+.basket--container {
+  .basket--content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    .basket--list {
+      width: 100%;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+          font-size: 14px;
+          font-weight: bold;
+
+          tr {
+            th {
+              border-bottom: 1px solid black;
+            }
+
+            th:nth-child(1) {
+              width: 10%;
+            }
+            th:nth-child(2) {
+              width: 60%;
+              text-align: left;
+            }
+            th:nth-child(3) {
+              width: 10%;
+            }
+            th:nth-child(4) {
+              width: 10%;
+            }
+            th:nth-child(5) {
+              width: 10%;
+            }
+          }
+        }
+
+        tbody {
+          font-size: 14px;
+
+          tr {
+            th {
+              border-bottom: 1px solid black;
+              font-weight: normal;
+            }
+
+            th:nth-child(1) {
+              width: 10%;
+            }
+            th:nth-child(2) {
+              width: 60%;
+              text-align: left;
+            }
+            th:nth-child(3) {
+              width: 10%;
+            }
+            th:nth-child(4) {
+              width: 10%;
+            }
+            th:nth-child(5) {
+              width: 10%;
+            }
+
+            .th--delete {
+              button {
+                cursor: pointer;
+                width: 100%;
+                border: unset;
+                background-color: unset;
+                font-size: 16px;
+
+                &:hover {
+                  .delete--icon {
+                    fill: $base-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .basket--list--card {
+        display: none;
+      }
+    }
+
+    .basket--action {
+      min-width: 300px;
+      padding: 15px;
+      background-color: $border-color;
+
+      .basket--action--content {
+        font-size: 12px;
+
+        .basket--summe {
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 0.7rem;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 30px;
+
+          span {
+            font-size: 12px;
+            font-weight: normal;
+          }
+        }
+      }
+
+      .basket--button--container {
+        margin-top: 30px;
+        .product--adtobasket--button {
+          width: 100%;
+
+          .btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .basket--container {
+    .basket--content {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .basket--container {
+    .basket--content {
+      .basket--list {
+        table {
+          display: none;
+        }
+
+        .basket--list--card {
+          display: flex;
+          gap: 15px;
+          font-size: 13px;
+          border-bottom: 1px solid $border-color;
+
+          .image--container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 15px;
+          }
+
+          .content--container {
+            padding: 5px;
+            p:nth-child(1) {
+              font-weight: bold;
+              text-decoration: underline;
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+
+      .basket--action {
+        width: 100%;
+        min-width: unset;
+      }
+    }
+  }
+}
+
+/*
+Checkout Step 1
+*/
+
+.checkout--step1 {
+  h2 {
+    margin-top: 15px;
+  }
+  .flexbox {
+    display: flex;
+    gap: 25px;
+  }
+  .input--container {
+    position: relative;
+    padding: 10px 0 0;
+    margin: 0 0 5px 0;
+    margin-bottom: 25px;
+    width: 100%;
+    .input--label {
+      position: absolute;
+      top: 0px;
+      left: 7px;
+      display: block;
+      transition: 0.2s;
+      font-size: 13px;
+      color: #9b9b9b;
+    }
+
+    .input--input {
+      font-family: inherit;
+      width: 100%;
+      border: 0;
+      border-bottom: 2px solid #9b9b9b;
+      outline: 0;
+      font-size: 15px;
+      color: #000000;
+      padding: 7px;
+      background: transparent;
+      transition: border-color 0.2s;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:placeholder-shown ~ .input--label {
+        font-size: 15px;
+        cursor: text;
+        top: 20px;
+        z-index: -1;
+      }
+
+      &:focus {
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+        border-image: $gradient-background-color;
+        border-image-slice: 1;
+
+        ~ .input--label {
+          position: absolute;
+          top: 0px;
+          display: block;
+          transition: 0.2s;
+          font-size: 13px;
+          color: $base-button-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .toggle--switch--container {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 5px 0;
+    width: 420px;
+
+    .toggle--content {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    .toggle--switch--button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      .toggle--box {
+        position: relative;
+        width: 30px;
+        height: 15px;
+        background-color: #e9e9ea;
+        border-radius: 400px;
+        transition: 1s ease all;
+
+        .toggle--circle {
+          position: absolute;
+          top: calc(50% - 8px);
+          left: 0px;
+          width: 16px;
+          height: 16px;
+          background-color: #ffffff;
+          box-shadow: 0px 0px 0px 2px #e9e9ea;
+          border-radius: 100%;
+          transition: 1s ease all;
+        }
+      }
+
+      .toggle--value {
+        font-weight: normal;
+      }
+    }
+  }
+
+  .button--container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .checkout--step1 {
+    padding: 20px;
+
+    h2 {
+      font-size: 17px;
+    }
+
+    .flexbox {
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    .input--container {
+      padding: 10px 10px 0;
+      margin-bottom: 0px;
+
+      .input--label {
+        left: 15px;
+      }
+    }
+
+    .toggle--container {
+      margin-top: 20px;
+
+      .toggle--switch--container {
+        width: 100%;
+      }
+    }
+
+    .button--container {
+      justify-content: center;
+      margin-top: 20px;
+
+      .product--adtobasket--button {
+        width: 100%;
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*
+Checkout Step 2
+*/
+
+.checkout--step2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+
+  hr {
+    width: 265px;
+    color: gray;
+  }
+
+  .select--payment {
+    cursor: pointer;
+    display: flex;
+    gap: 35px;
+    justify-content: space-between;
+    align-items: center;
+
+    .radio {
+      width: 25px;
+      height: 25px;
+      border: 1px solid gray;
+      border-radius: 50%;
+    }
+
+    .radio--active {
+      width: 25px;
+      height: 25px;
+      border: 1px solid gray;
+      border-radius: 50%;
+      background-color: $base-color;
+    }
+  }
+}
+
+/*
+Checkout Step 3
+*/
+
+.checkout--step3 {
+  .flex--adress {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    .adress {
+      h2 {
+        font-size: 20px;
+        text-decoration: underline;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .payment--container {
+    margin: 50px 15px;
+  }
+
+  .basket--card {
+    padding: 15px;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .endprice {
+    margin: 25px;
+  }
+
+  .send--mail--container {
+    margin: 25px;
+
+    span {
+      color: $base-color;
+    }
+  }
+}

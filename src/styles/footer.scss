@@ -1,0 +1,71 @@
+/* 
+  Datei: footer.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+  Beschreibung: Dieses Stylesheet enthält die Stilregeln für den Footer der Shop-Anwendung.
+*/
+
+@import "./color.scss";
+
+.footer--container {
+  .footer--view--info {
+    border-top: 1px solid $border-color;
+
+    .footer--view--headline {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        padding: 10px;
+
+        img {
+          margin-right: 10px;
+        }
+
+        h3 {
+          padding-top: 3px;
+        }
+
+        @media screen and (max-width: 230px) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .footer--view--infolinks {
+      padding: 15px;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-evenly;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      a {
+        padding: 5px 10px;
+        margin: 5px 0;
+        max-width: max-content;
+
+        &:hover {
+          color: #888888;
+          text-decoration: underline;
+        }
+      }
+
+      @media screen and (max-width: 665px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .footer--view--copy {
+    padding: 15px;
+    border-top: 1px solid $border-color;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,188 @@
+/* 
+  Datei: productpage.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+*/
+
+@import "@/styles/color.scss";
+
+.product--page--container {
+  .product--information {
+    display: flex;
+    gap: 50px;
+
+    .images--view {
+      .image--preview {
+        position: relative;
+        margin-bottom: 25px;
+
+        .pfeil {
+          cursor: pointer;
+          background-color: rgba($color: $border-color, $alpha: 0.7);
+          padding: 5px;
+          border-radius: 50%;
+        }
+
+        .left {
+          position: absolute;
+          top: calc(50% - 25px);
+          left: -10px;
+        }
+
+        .right {
+          position: absolute;
+          top: calc(50% - 25px);
+          right: -10px;
+        }
+
+        img {
+          object-fit: contain;
+        }
+      }
+
+      .product--images--list {
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+
+        li {
+          list-style-type: none;
+
+          img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            filter: grayscale(1);
+          }
+
+          .activ {
+            filter: none;
+            border: 2px solid $base-color;
+            box-shadow: 0px 0px 2px 2px $base-color;
+          }
+        }
+      }
+    }
+
+    .product--content-container {
+      margin-top: 30px;
+
+      h2 {
+        text-align: center;
+        padding-bottom: 5px;
+        color: $base-color;
+      }
+
+      h3 {
+        text-align: center;
+        margin-bottom: 25px;
+        padding-bottom: 5px;
+        color: $base-color;
+        border-bottom: 1px solid #eee;
+      }
+
+      .product--description {
+        padding: 0 20px 20px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 25px;
+
+        ul {
+          margin: 25px;
+          li {
+            margin: 5px 0;
+            list-style-type: "✶ ";
+          }
+        }
+      }
+
+      .product--action {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 25px;
+
+        .product--price {
+          color: $base-color;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .product--page--container {
+    .product--information {
+      flex-direction: column;
+      align-items: center;
+
+      .product--content-container {
+        .product--content {
+          display: flex;
+          flex-direction: column-reverse;
+
+          .product--action {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+          }
+
+          .product--description {
+            margin-bottom: 0;
+            border: unset;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .product--page--container {
+    .product--information {
+      .images--view {
+        max-width: 90%;
+
+        .image--preview {
+          .preview--image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .product--content-container {
+        .product--content {
+          .product--action {
+            border-bottom: 1px solid #eee;
+            padding: 0 25px 25px 25px;
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .product--page--container {
+    .product--information {
+      .product--content-container {
+        .product--content {
+          .product--action {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .product--adtobasket--button {
+              width: 100%;
+              .btn {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

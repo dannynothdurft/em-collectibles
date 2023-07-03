@@ -1,0 +1,56 @@
+/* 
+  Datei: navigation.scss
+  Version: 1.0.0
+  Entwickler: Danny Nothdurft
+  Beschreibung: Dieses Stylesheet enthält die Stilregeln für die Navigations Leiste der Shop-Anwendung.
+*/
+
+@import "./color.scss";
+
+$navigationHeight: 85px;
+$footerHeight: 176px;
+
+.navigation--container {
+  height: $navigationHeight;
+  padding: 0 25px;
+  background: $gradient-background-color;
+  color: $font-color-bright;
+
+  .navigation--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .navigation--menu {
+      display: flex;
+      gap: 25px;
+
+      a {
+        color: $font-color-bright;
+
+        &.active {
+          color: $base-color;
+          text-decoration: underline;
+          text-decoration-color: $base-color;
+        }
+      }
+    }
+  }
+}
+
+.main--container {
+  max-width: 1200px;
+  min-height: calc(100vh - $navigationHeight - $footerHeight);
+  margin: 0 auto;
+  padding: 25px 50px;
+
+  @media screen and (max-width: 800px) {
+    padding: 25px 30px;
+  }
+
+  @media screen and (max-width: 435px) {
+    padding: 15px 0px;
+  }
+}
