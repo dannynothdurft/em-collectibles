@@ -15,7 +15,7 @@ import { toast } from "react-hot-toast";
 //PayPal
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
-function page() {
+function StepThree() {
   const router = useRouter();
   const currentUrl =
     typeof window !== "undefined" ? window.location.origin : "";
@@ -212,4 +212,4 @@ function page() {
   );
 }
 
-export default page;
+export default StepThree;

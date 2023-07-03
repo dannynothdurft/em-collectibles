@@ -12,7 +12,7 @@ import { toast } from "react-hot-toast";
 import ToggleSwitch from "@/app/admin/module/article/article/components/ToggleSwitch";
 import "@/styles/basket.scss";
 
-function page() {
+function StepOne() {
   const router = useRouter();
   const [same, setSame] = useState(true);
 
@@ -585,4 +585,4 @@ function page() {
   );
 }
 
-export default page;
+export default StepOne;
