@@ -77,12 +77,13 @@ export default function Home() {
           Mit Slice wird das Array auf 8 Producte Reduziert und ausgegeben.
         */}
         <div className="new--at--shop--product--cards">
-          {[...allArticles]
+          {allArticles ? "Ja" : "Nein"}
+          {/* {[...allArticles]
             .reverse()
             .slice(0, 8)
             .map((card) => {
               return <ProductCard key={card._id} data={card} />;
-            })}
+            })} */}
         </div>
 
         <Link className="button" href="/shop">
