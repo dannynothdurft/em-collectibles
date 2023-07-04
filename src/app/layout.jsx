@@ -11,7 +11,7 @@ import LayoutProvider from "@/provider/LayoutProvider";
 
 export const metadata = {
   title: {
-    default: "EM-Collectibles",
+    default: "EM-Collectibles - Grading Karten Shop",
     template: "%s",
   },
   keywords: ["EM-Collectibles", "Danny Nothdurft"],
@@ -23,7 +23,7 @@ export const metadata = {
   siteName: "Home | EM-Collectibles",
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index,follow",
-  description: `Hier findest du schnell und unkompliziert Grading Karten.`,
+  description: `EM-Collectibles - Grading Shop für Trading Cards. Authentische Bewertungen. Perfekt für Sammler und Investoren. Jetzt entdecken!`,
 };
 
 export default function RootLayout({ children }) {
