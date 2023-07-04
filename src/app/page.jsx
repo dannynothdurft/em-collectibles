@@ -113,7 +113,12 @@ export default function Home() {
           </p>
         </div>
         <div className="home--shippinginfo--image">
-          <Image src="/head.png" width={250} height={250} alt="Versand Bild" />
+          <Image
+            src="/logo512.png"
+            width={250}
+            height={250}
+            alt="Versand Bild"
+          />
         </div>
       </div>
     </main>
