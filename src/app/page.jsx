@@ -25,8 +25,7 @@ export default function Home() {
           style={{ height: "auto" }}
           className="header--image"
           alt="Header"
-          fetchpriority="lazy"
-          //priority
+          priority
         />
       </div>
 

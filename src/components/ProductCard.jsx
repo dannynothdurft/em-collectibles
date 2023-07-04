@@ -77,6 +77,7 @@ function ProductCard({ data }) {
           <Link
             href={`/products/${data._id}`}
             alt={`zum Artikel - ${data.name}`}
+            aria-label={`zum Artikel - ${data.name}`}
           >
             <BsEye className="product--card--icon" />
           </Link>
