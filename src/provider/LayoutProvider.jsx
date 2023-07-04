@@ -44,11 +44,7 @@ function LayoutProvider({ children }) {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (
-        allArticles === undefined &&
-        allSettings === undefined &&
-        !isNotPrivatePage
-      ) {
+      if (allArticles === undefined && !isNotPrivatePage) {
         getStartData();
       }
     }, 1);
