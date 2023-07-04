@@ -8,7 +8,6 @@
 "use client";
 import React, { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
-import Loader from "@/components/loader/Loader";
 import Footer from "@/components/footer/Footer";
 import "@/styles/navigation.scss";
 import Image from "next/image";
