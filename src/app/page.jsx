@@ -19,7 +19,7 @@ export default function Home() {
     <main className="main--container--page">
       <div>
         <Image
-          src="/head.webp"
+          src="https://res.cloudinary.com/dca67w0ia/image/upload/v1688490841/head_sebyjd.webp"
           width={1100}
           height={385}
           style={{ height: "auto" }}
