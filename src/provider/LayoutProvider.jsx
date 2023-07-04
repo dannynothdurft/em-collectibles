@@ -8,6 +8,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
+import Loader from "@/components/loader/Loader";
 import Footer from "@/components/footer/Footer";
 import "@/styles/navigation.scss";
 import Image from "next/image";
@@ -54,40 +55,44 @@ function LayoutProvider({ children }) {
   return (
     <>
       {!isNotPrivatePage ? (
-        <>
-          <Toaster />
-          <div className="navigation--container">
-            <div className="navigation--wrapper">
-              <Link href="/">
-                <Image
-                  src={allSettings.logo}
-                  width={75}
-                  height={75}
-                  alt="Logo"
-                />
-              </Link>
+        allSettings !== undefined && allArticles !== undefined ? (
+          <>
+            <Toaster />
+            <div className="navigation--container">
+              <div className="navigation--wrapper">
+                <Link href="/">
+                  <Image
+                    src={allSettings.logo}
+                    width={75}
+                    height={75}
+                    alt="Logo"
+                  />
+                </Link>
 
-              <div className="navigation--menu">
-                <Link
-                  href="/shop"
-                  className={pathname === "/shop" ? "active" : ""}
-                >
-                  Shop
-                </Link>
-                <Link
-                  href="/warenkorb"
-                  className={pathname === "/warenkorb" ? "active" : ""}
-                >
-                  Warenkorb
-                </Link>
+                <div className="navigation--menu">
+                  <Link
+                    href="/shop"
+                    className={pathname === "/shop" ? "active" : ""}
+                  >
+                    Shop
+                  </Link>
+                  <Link
+                    href="/warenkorb"
+                    className={pathname === "/warenkorb" ? "active" : ""}
+                  >
+                    Warenkorb
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="main--container">{children}</div>
+            <div className="main--container">{children}</div>
 
-          <Footer />
-        </>
+            <Footer />
+          </>
+        ) : (
+          <Loader />
+        )
       ) : (
         isNotPrivatePage && <>{children}</>
       )}
