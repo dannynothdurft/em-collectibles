@@ -19,7 +19,7 @@ export default function Home() {
     <main className="main--container--page">
       <div>
         <Image
-          src="/head.png"
+          src="/head.webp"
           width={1100}
           height={385}
           style={{ height: "auto" }}
