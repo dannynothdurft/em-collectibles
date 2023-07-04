@@ -181,6 +181,9 @@
     }
 
     .home--shippinginfo--image {
+      img {
+        object-fit: cover;
+      }
       @media screen and (max-width: 843px) {
         margin-top: 4px;
       }
