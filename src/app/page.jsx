@@ -15,6 +15,8 @@ import { useSelector } from "react-redux";
 export default function Home() {
   const { allArticles } = useSelector((state) => state.articles);
 
+  console.log("allArticles", allArticles);
+
   return (
     <main className="main--container--page">
       <div>
@@ -76,14 +78,16 @@ export default function Home() {
           Dann wird es mit reverse umgedreht um die neusten ganz vorne zu haben.
           Mit Slice wird das Array auf 8 Producte Reduziert und ausgegeben.
         */}
-        <div className="new--at--shop--product--cards">
-          {allArticles !== undefined
-            ? allArticles
-                .slice(-8)
-                .reverse()
-                .map((card) => <ProductCard key={card._id} data={card} />)
-            : null}
-        </div>
+        {allArticles !== undefined ? (
+          <div className="new--at--shop--product--cards">
+            {[...allArticles]
+              .reverse()
+              .slice(0, 8)
+              .map((card) => {
+                return <ProductCard key={card._id} data={card} />;
+              })}
+          </div>
+        ) : null}
 
         <Link className="button" href="/shop">
           Alle Anzeigen
