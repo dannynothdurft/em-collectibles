@@ -58,39 +58,37 @@ function LayoutProvider({ children }) {
         allSettings !== undefined && allArticles !== undefined ? (
           <>
             <Toaster />
-            {!isNotPrivatePage && (
-              <div className="navigation--container">
-                <div className="navigation--wrapper">
-                  <Link href="/">
-                    <Image
-                      src={allSettings.logo}
-                      width={75}
-                      height={75}
-                      alt="Logo"
-                    />
-                  </Link>
+            <div className="navigation--container">
+              <div className="navigation--wrapper">
+                <Link href="/">
+                  <Image
+                    src={allSettings.logo}
+                    width={75}
+                    height={75}
+                    alt="Logo"
+                  />
+                </Link>
 
-                  <div className="navigation--menu">
-                    <Link
-                      href="/shop"
-                      className={pathname === "/shop" ? "active" : ""}
-                    >
-                      Shop
-                    </Link>
-                    <Link
-                      href="/warenkorb"
-                      className={pathname === "/warenkorb" ? "active" : ""}
-                    >
-                      Warenkorb
-                    </Link>
-                  </div>
+                <div className="navigation--menu">
+                  <Link
+                    href="/shop"
+                    className={pathname === "/shop" ? "active" : ""}
+                  >
+                    Shop
+                  </Link>
+                  <Link
+                    href="/warenkorb"
+                    className={pathname === "/warenkorb" ? "active" : ""}
+                  >
+                    Warenkorb
+                  </Link>
                 </div>
               </div>
-            )}
+            </div>
 
-            {<div className="main--container">{children}</div>}
+            <div className="main--container">{children}</div>
 
-            {!isNotPrivatePage && <Footer />}
+            <Footer />
           </>
         ) : (
           <Loader />
