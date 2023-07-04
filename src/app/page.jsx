@@ -74,7 +74,7 @@ export default function Home() {
         {/*
           In dieser Map wird zuerst das Array Kopiert.
           Dann wird es mit reverse umgedreht um die neusten ganz vorne zu haben.
-          Mit Slice wird das Array auf 8 Producte Reduziert und ausgegeben.
+          Mit Slice wird das Array auf 8 Producte Reduziert und ausgegeben!
         */}
         <div className="new--at--shop--product--cards">
           {allArticles
