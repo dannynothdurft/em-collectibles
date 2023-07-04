@@ -16,9 +16,11 @@ function Shop() {
 
   return (
     <div className="shop--container">
-      {allArticles.map((card) => {
-        return <ProductCard key={card._id} data={card} />;
-      })}
+      {allArticles
+        ? allArticles.map((card) => {
+            return <ProductCard key={card._id} data={card} />;
+          })
+        : null}
     </div>
   );
 }
