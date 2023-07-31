@@ -8,6 +8,7 @@
 import "@/styles/globals.scss";
 import { Redux } from "@/provider/redux";
 import LayoutProvider from "@/provider/LayoutProvider";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: {
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         <Redux>
           <LayoutProvider>{children}</LayoutProvider>
         </Redux>
+        <Analytics />
       </body>
     </html>
   );
