@@ -25,8 +25,7 @@ function StepThree() {
   const [payment, setPayment] = useState();
   const [value, setValue] = useState();
 
-  const clientID =
-    "Ae90tZCmvcy3GROpd-lRR_9hZJL7-fNlMEAYVIysS6nZfRWWwcc1qyoUuO-fK0jw2rWkxlvvLtJOHMkZ";
+  const clientID = ""; // Hier muss die ID von PAYPAL rein
   const style = { layout: "vertical", height: 30 };
 
   useEffect(() => {
