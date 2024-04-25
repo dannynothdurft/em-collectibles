@@ -1,4 +1,5 @@
 "use client";
+
 import "@/styles/notfound.scss";
 import React, { useRef, useEffect } from "react";
 import Link from "next/link";
