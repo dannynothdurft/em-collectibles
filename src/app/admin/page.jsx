@@ -7,14 +7,9 @@
 
 "use client";
 import React from "react";
-import LuckySpin from "@/module/lucky-spin/src/LuckySpin";
 
 function Admin() {
-  return (
-    <div>
-      <LuckySpin />
-    </div>
-  );
+  return <div>¡¡Hier kommt noch ein Dashboard hin!!</div>;
 }
 
 export default Admin;
