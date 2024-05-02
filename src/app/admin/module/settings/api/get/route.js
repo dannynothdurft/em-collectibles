@@ -11,7 +11,7 @@ import { NextResponse } from "next/server";
 const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
 
-export async function GET(request) {
+export async function POST(request) {
   await client.connect();
 
   try {

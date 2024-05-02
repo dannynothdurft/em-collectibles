@@ -73,7 +73,7 @@ function Layout({ children }) {
 
   const getArticles = async () => {
     try {
-      const response = await axios.get(
+      const response = await axios.post(
         `${currentUrl}/admin/module/article/article/api/get`
       );
       dispatch(incrementProducts(response.data.data));
@@ -84,7 +84,7 @@ function Layout({ children }) {
 
   const getOrders = async () => {
     try {
-      const response = await axios.get(
+      const response = await axios.post(
         `${currentUrl}/admin/module/orders/api/getorders`
       );
       dispatch(incrementOrders(response.data.data));
@@ -95,7 +95,7 @@ function Layout({ children }) {
 
   const getSettings = async () => {
     try {
-      const response = await axios.get(
+      const response = await axios.post(
         `${currentUrl}/admin/module/settings/api/get`
       );
       dispatch(incrementSettings(response.data.data));
