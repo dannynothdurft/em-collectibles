@@ -29,7 +29,7 @@ function LayoutProvider({ children }) {
 
   const getStartData = async () => {
     try {
-      const response = await axios.get(`${currentUrl}/api/start`);
+      const response = await axios.post(`${currentUrl}/api/start`);
       if (response.data.success) {
         dispatch(incrementArticles(response.data.data.activeArticles));
         dispatch(incrementSettings(response.data.data.shopSettings));
