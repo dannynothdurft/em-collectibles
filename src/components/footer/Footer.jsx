@@ -25,13 +25,13 @@ function Footer() {
         </div>
 
         <div className="footer--view--infolinks">
-          <Link href="./info/impressum">Impressum</Link>
-          <Link href="./info/about">Über uns</Link>
-          <Link href="./info/agb">AGB</Link>
-          <Link href="./info/datenschutz">Datenschutz</Link>
-          <Link href="./info/kontakt">Kontakt</Link>
-          <Link href="./info/versand">Versand</Link>
-          <Link href="./info/widerrufsbelerung">Widerrufsbelerung</Link>
+          <Link href="/info/impressum">Impressum</Link>
+          <Link href="/info/about">Über uns</Link>
+          <Link href="/info/agb">AGB</Link>
+          <Link href="/info/datenschutz">Datenschutz</Link>
+          <Link href="/info/kontakt">Kontakt</Link>
+          <Link href="/info/versand">Versand</Link>
+          <Link href="/info/widerrufsbelerung">Widerrufsbelerung</Link>
         </div>
       </div>
 
