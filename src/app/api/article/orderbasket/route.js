@@ -27,7 +27,7 @@ export async function POST(request) {
     const getSettings = await colSettings.findOne();
     const billNumber = getSettings.billNumber;
     const billCrurrentNumber =
-      "EM-R-2023-" + billNumber.toString().padStart(4, "0");
+      "EM-R-2024-" + billNumber.toString().padStart(4, "0");
 
     let today = new Date();
     let day = today.getDate();
